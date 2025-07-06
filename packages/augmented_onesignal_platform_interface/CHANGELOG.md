@@ -1,3 +1,7 @@
+# Changelog
+
 ## 0.0.1
 
-* TODO: Describe initial release.
+- Initial release.
+- Defines platform interface for federated plugin.
+- Includes abstract methods and shared models.

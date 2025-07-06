@@ -1,15 +1,21 @@
 # augmented_onesignal_mobile
 
-A new Flutter plugin project.
+Mobile (Android/iOS) implementation of [`augmented_onesignal`](https://pub.dev/packages/augmented_onesignal).
 
-## Getting Started
+This package wraps the excellent [onesignal_flutter](https://pub.dev/packages/onesignal_flutter) plugin to match the `augmented_onesignal_platform_interface`.
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/to/develop-plugins),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Initialize OneSignal with your app ID
+- Request push permission
+- Listen for permission changes
+- Stream foreground and click notification events
+- Manage tags and user login
 
+## Usage
+
+You **do not need to import this package directly**. Instead, depend on:
+
+```yaml
+dependencies:
+  augmented_onesignal: ^<latest-version>

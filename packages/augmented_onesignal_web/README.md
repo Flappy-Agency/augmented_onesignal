@@ -1,15 +1,21 @@
 # augmented_onesignal_web
 
-A new Flutter plugin project.
+Web implementation of [`augmented_onesignal`](https://pub.dev/packages/augmented_onesignal).
 
-## Getting Started
+It integrates directly with the [OneSignal Web SDK](https://documentation.onesignal.com/docs/web-push-sdk-setup) using JS interop.
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/to/develop-plugins),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Initialize OneSignal on web with your app ID
+- Request push permission
+- Listen for permission changes
+- Stream foreground and click notification events
+- Manage tags and user login
 
+## Usage
+
+You **do not need to import this package directly**. Instead, depend on:
+
+```yaml
+dependencies:
+augmented_onesignal: ^<latest-version>

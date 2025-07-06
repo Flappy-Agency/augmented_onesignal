@@ -1,3 +1,9 @@
+# Changelog
+
 ## 0.0.1
 
-* TODO: Describe initial release.
+- Initial release.
+- Provides a unified Flutter API for OneSignal push notifications.
+- Supports Android, iOS, and Web.
+- Streams for permission changes, foreground notifications, and click events.
+- Tag and user management.

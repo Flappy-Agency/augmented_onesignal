@@ -1,3 +1,7 @@
+# Changelog
+
 ## 0.0.1
 
-* TODO: Describe initial release.
+- Initial release.
+- Mobile (Android/iOS) implementation of augmented_onesignal.
+- Wraps onesignal_flutter for permission management, foreground/click events, and tags.

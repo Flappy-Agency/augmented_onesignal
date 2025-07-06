@@ -1,39 +1,17 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# augmented_onesignal_platform_interface
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+This package defines the common platform interface for the [`augmented_onesignal`](https://pub.dev/packages/augmented_onesignal) plugin.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+It contains the abstract class and shared models that must be implemented by platform-specific packages.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+- Defines the `AugmentedOneSignalPlatform` interface
+- Contains shared model objects like `AugmentedNotification`
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+This package is **not intended for direct use in apps**. It is a support package for federated implementations:
 
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+- [`augmented_onesignal_mobile`](https://pub.dev/packages/augmented_onesignal_mobile)
+- [`augmented_onesignal_web`](https://pub.dev/packages/augmented_onesignal_web)
