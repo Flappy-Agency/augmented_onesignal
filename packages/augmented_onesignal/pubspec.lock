@@ -15,21 +15,21 @@ packages:
       path: "../augmented_onesignal_mobile"
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.0.2"
   augmented_onesignal_platform_interface:
     dependency: "direct main"
     description:
       path: "../augmented_onesignal_platform_interface"
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.0.2"
   augmented_onesignal_web:
     dependency: "direct main"
     description:
       path: "../augmented_onesignal_web"
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.0.2"
   boolean_selector:
     dependency: transitive
     description:

@@ -1,6 +1,6 @@
 name: augmented_onesignal_web
 description: "Web implementation of the Augmented OneSignal Flutter plugin using the OneSignal JavaScript SDK."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/Flappy-Agency/augmented_onesignal
 
 environment:

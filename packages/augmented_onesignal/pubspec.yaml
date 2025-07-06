@@ -1,6 +1,6 @@
 name: augmented_onesignal
 description: "Flutter federated plugin for integrating OneSignal push notifications across mobile and web with a unified API."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/Flappy-Agency/augmented_onesignal
 
 environment:
