@@ -1,5 +1,5 @@
 name: augmented_onesignal_platform_interface
-description: "A new Flutter package project."
+description: "Platform interface defining the API for the Augmented OneSignal Flutter plugin."
 version: 0.0.1
 homepage: https://github.com/Flappy-Agency/augmented_onesignal
 

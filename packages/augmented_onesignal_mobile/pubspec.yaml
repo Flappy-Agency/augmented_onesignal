@@ -1,5 +1,5 @@
 name: augmented_onesignal_mobile
-description: "A new Flutter plugin project."
+description: "Mobile implementation of the Augmented OneSignal Flutter plugin using the OneSignal Flutter SDK."
 version: 0.0.1
 homepage: https://github.com/Flappy-Agency/augmented_onesignal
 
