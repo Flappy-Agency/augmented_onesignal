@@ -1,7 +1,8 @@
 import 'augmented_notification.dart';
 
 abstract class AugmentedOneSignalPlatform {
-  static AugmentedOneSignalPlatform instance = DefaultAugmentedOneSignalPlatform();
+  static AugmentedOneSignalPlatform instance =
+      DefaultAugmentedOneSignalPlatform();
 
   Future<void> init({required String apiKey});
 
@@ -46,7 +47,8 @@ class DefaultAugmentedOneSignalPlatform implements AugmentedOneSignalPlatform {
 
   @override
   Future<void> requestPushPermission(bool fallbackToSettings) {
-    throw UnsupportedError('No implementation found for requestPushPermission()');
+    throw UnsupportedError(
+        'No implementation found for requestPushPermission()');
   }
 
   @override
@@ -55,10 +57,12 @@ class DefaultAugmentedOneSignalPlatform implements AugmentedOneSignalPlatform {
   }
 
   @override
-  Stream<AugmentedNotification> get foregroundNotificationStream => throw UnimplementedError();
+  Stream<AugmentedNotification> get foregroundNotificationStream =>
+      throw UnimplementedError();
 
   @override
-  Stream<AugmentedNotification> get clickNotificationStream => throw UnimplementedError();
+  Stream<AugmentedNotification> get clickNotificationStream =>
+      throw UnimplementedError();
 
   @override
   Future<void> login(String userId) => throw UnimplementedError();

@@ -10,8 +10,10 @@ class AugmentedOneSignalMobile extends AugmentedOneSignalPlatform {
   }
 
   final _permissionChangeController = StreamController<bool>.broadcast();
-  final _foregroundNotificationController = StreamController<AugmentedNotification>.broadcast();
-  final _clickNotificationController = StreamController<AugmentedNotification>.broadcast();
+  final _foregroundNotificationController =
+      StreamController<AugmentedNotification>.broadcast();
+  final _clickNotificationController =
+      StreamController<AugmentedNotification>.broadcast();
 
   @override
   Future<void> init({required String apiKey}) async {
@@ -62,10 +64,12 @@ class AugmentedOneSignalMobile extends AugmentedOneSignalPlatform {
   Stream<bool> permissionChangeStream() => _permissionChangeController.stream;
 
   @override
-  Stream<AugmentedNotification> get foregroundNotificationStream => _foregroundNotificationController.stream;
+  Stream<AugmentedNotification> get foregroundNotificationStream =>
+      _foregroundNotificationController.stream;
 
   @override
-  Stream<AugmentedNotification> get clickNotificationStream => _clickNotificationController.stream;
+  Stream<AugmentedNotification> get clickNotificationStream =>
+      _clickNotificationController.stream;
 
   @override
   Future<void> login(String userId) {

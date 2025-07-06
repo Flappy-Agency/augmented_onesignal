@@ -5,7 +5,12 @@ class AugmentedNotification {
   final Map<String, dynamic>? additionalData;
   final String? launchUrl;
 
-  AugmentedNotification({required this.notificationId, this.title, this.body, this.additionalData, this.launchUrl});
+  AugmentedNotification(
+      {required this.notificationId,
+      this.title,
+      this.body,
+      this.additionalData,
+      this.launchUrl});
 
   @override
   String toString() {

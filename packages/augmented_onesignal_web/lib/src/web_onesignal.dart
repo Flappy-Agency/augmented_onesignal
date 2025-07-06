@@ -15,8 +15,10 @@ bool _foregroundListenerSetup = false;
 bool _clickListenerSetup = false;
 
 final _permissionChangeController = StreamController<bool>.broadcast();
-final _foregroundNotificationController = StreamController<AugmentedNotification>.broadcast();
-final _clickNotificationController = StreamController<AugmentedNotification>.broadcast();
+final _foregroundNotificationController =
+    StreamController<AugmentedNotification>.broadcast();
+final _clickNotificationController =
+    StreamController<AugmentedNotification>.broadcast();
 
 Future<void> initOneSignalJs(String apiKey) {
   if (apiKey.isEmpty) {
@@ -30,7 +32,8 @@ Future<void> initOneSignalJs(String apiKey) {
       'serviceWorkerPath': 'onesignal/OneSignalSDKWorker.js',
     });
 
-    await js_util.promiseToFuture<void>(js_util.callMethod(os, 'init', [options]));
+    await js_util
+        .promiseToFuture<void>(js_util.callMethod(os, 'init', [options]));
     await _setupPermissionChangeListener();
     await _setupForegroundNotificationListener();
     await _setupClickNotificationListener();
@@ -41,7 +44,8 @@ Future<bool> hasPushPermissionJs() {
   return _runOneSignalDeferred<bool>((os) async {
     final notifications = js_util.getProperty(os, 'Notifications');
     if (notifications == null) {
-      throw Exception('OneSignal.Notifications is not available – did you call init()?');
+      throw Exception(
+          'OneSignal.Notifications is not available – did you call init()?');
     }
 
     final permission = js_util.getProperty(notifications, 'permission');
@@ -53,7 +57,8 @@ Future<void> requestPushPermissionJs(_) {
   return _runOneSignalDeferred<void>((os) async {
     final notifications = js_util.getProperty(os, 'Notifications');
     if (notifications == null) {
-      throw Exception('OneSignal.Notifications is not available – did you call init()?');
+      throw Exception(
+          'OneSignal.Notifications is not available – did you call init()?');
     }
 
     final result = js_util.callMethod(notifications, 'requestPermission', []);
@@ -63,12 +68,14 @@ Future<void> requestPushPermissionJs(_) {
   });
 }
 
-Stream<bool> get permissionChangeStreamWeb => _permissionChangeController.stream.distinct();
+Stream<bool> get permissionChangeStreamWeb =>
+    _permissionChangeController.stream.distinct();
 
 Stream<AugmentedNotification> get foregroundNotificationStreamWeb =>
     _foregroundNotificationController.stream.distinct();
 
-Stream<AugmentedNotification> get clickNotificationStreamWeb => _clickNotificationController.stream;
+Stream<AugmentedNotification> get clickNotificationStreamWeb =>
+    _clickNotificationController.stream;
 
 Future<void> loginJs(String externalId) {
   if (externalId.isEmpty) {
@@ -183,7 +190,8 @@ Future<void> _setupPermissionChangeListener() async {
   await _runOneSignalDeferred<void>((os) async {
     final notifications = js_util.getProperty(os, 'Notifications');
     if (notifications == null) {
-      throw Exception('OneSignal.Notifications is not available – did you call init()?');
+      throw Exception(
+          'OneSignal.Notifications is not available – did you call init()?');
     }
 
     // Get initial permission state
@@ -222,7 +230,8 @@ Future<void> _setupForegroundNotificationListener() async {
           final notificationId = notifMap['notificationId']?.toString() ?? '';
           final title = notifMap['title']?.toString();
           final body = notifMap['body']?.toString();
-          final additionalDataMap = notifMap['additionalData'] as Map<String, dynamic>?;
+          final additionalDataMap =
+              notifMap['additionalData'] as Map<String, dynamic>?;
           final launchUrl = notifMap['launchURL']?.toString();
 
           final augmented = AugmentedNotification(
@@ -263,7 +272,8 @@ Future<void> _setupClickNotificationListener() async {
         final notificationId = notifMap['notificationId']?.toString() ?? '';
         final title = notifMap['title']?.toString();
         final body = notifMap['body']?.toString();
-        final additionalDataMap = notifMap['additionalData'] as Map<String, dynamic>?;
+        final additionalDataMap =
+            notifMap['additionalData'] as Map<String, dynamic>?;
         final launchUrl = notifMap['launchURL']?.toString();
 
         final augmented = AugmentedNotification(

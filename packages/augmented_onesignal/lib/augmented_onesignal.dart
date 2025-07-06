@@ -11,7 +11,8 @@ class AugmentedOneSignal {
   }
 
   static Future<void> requestPushPermission(bool fallbackToSettings) {
-    return AugmentedOneSignalPlatform.instance.requestPushPermission(fallbackToSettings);
+    return AugmentedOneSignalPlatform.instance
+        .requestPushPermission(fallbackToSettings);
   }
 
   static Stream<bool> permissionChangeStream() {

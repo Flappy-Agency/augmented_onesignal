@@ -32,10 +32,12 @@ class AugmentedOneSignalWeb extends AugmentedOneSignalPlatform {
   }
 
   @override
-  Stream<AugmentedNotification> get foregroundNotificationStream => foregroundNotificationStreamWeb;
+  Stream<AugmentedNotification> get foregroundNotificationStream =>
+      foregroundNotificationStreamWeb;
 
   @override
-  Stream<AugmentedNotification> get clickNotificationStream => clickNotificationStreamWeb;
+  Stream<AugmentedNotification> get clickNotificationStream =>
+      clickNotificationStreamWeb;
 
   @override
   Future<void> login(String userId) => loginJs(userId);
