@@ -1,0 +1,8 @@
+# melos_managed_dependency_overrides: augmented_onesignal_mobile,augmented_onesignal_platform_interface,augmented_onesignal_web
+dependency_overrides:
+  augmented_onesignal_mobile:
+    path: ../augmented_onesignal_mobile
+  augmented_onesignal_platform_interface:
+    path: ../augmented_onesignal_platform_interface
+  augmented_onesignal_web:
+    path: ../augmented_onesignal_web
